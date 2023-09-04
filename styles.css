@@ -1,0 +1,110 @@
+/* Reset some default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and style to the body */
+body {
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Center the content horizontally and vertically */
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px; /* Add padding for better mobile readability */
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/* Center the iframe and give it some margin */
+main {
+    margin: 20px 0;
+}
+
+iframe {
+    display: block;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Add some space below the footer */
+body {
+    margin-bottom: 20px;
+}
+
+/* Media Query for Mobile Phones */
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start; /* Align content to the top for small screens */
+    }
+    .container {
+        max-width: 100%; /* Full-width container on small screens */
+    }
+    header {
+        padding: 10px 0; /* Reduce header padding on small screens */
+    }
+    h1 {
+        font-size: 28px; /* Smaller font size for h1 on small screens */
+    }
+    h2 {
+        font-size: 20px; /* Smaller font size for h2 on small screens */
+    }
+}
+
+
+/* Style the iframe container */
+.iframe-container {
+    position: relative;
+    width: 100%;
+}
+
+.overlay-twitch {
+    position: absolute;
+    top: 85.4%;
+    left: 523px;
+    width: 78px;
+    height: 50px;
+    background: rgba(250, 0, 0, 0); /* Adjust the transparency (0.5 for 50% transparency) */
+    z-index: 2;
+}
+
+.overlay-twitch-channel-name {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 200px;
+    height: 50px;
+    background: rgba(24, 24, 24, 0); /* Adjust the transparency (0.5 for 50% transparency) */
+    z-index: 2;
+}

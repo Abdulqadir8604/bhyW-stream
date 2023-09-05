@@ -1,5 +1,5 @@
-const reqUsername = "";
-const reqPassword = "";
+const reqUsername = "admin";
+const reqPassword = "admin";
 
 document.addEventListener("DOMContentLoaded", function () {
     const loginContainer = document.querySelector(".login-container");
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = document.querySelector("#password").value;
 
         // You can replace this with your own authentication logic
-        if (username === reqUsername && password === reqPassword) {
+        if (username.toLowerCase() === reqUsername && password.toLowerCase() === reqPassword) {
             document.querySelector("#username").value = "";
             document.querySelector("#password").value = "";
             loginContainer.style.display = "none";

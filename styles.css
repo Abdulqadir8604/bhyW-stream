@@ -4,30 +4,35 @@ body, h1, h2, p {
     padding: 0;
 }
 
-/* Apply a background color and style to the body */
+/* Global styles */
 body {
-    background-color: #333;
     font-family: Arial, sans-serif;
-    color: #333;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    background-color: #333;
 }
 
-/* Center the content horizontally and vertically */
 .container {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     max-width: 800px;
     padding: 0 20px; /* Add padding for better mobile readability */
 }
 
-/* Style the header */
 header {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
+    position: relative;
+
     z-index: 1;
 }
 
@@ -40,7 +45,6 @@ h2 {
     font-size: 24px;
 }
 
-/* Center the iframe and give it some margin */
 main {
     margin: 20px 0;
 }
@@ -51,42 +55,29 @@ iframe {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the footer */
+.twitch-iframe {
+    width: 90vw;
+    height: 60vh;
+    max-width: 800px;
+    max-height: 450px;
+}
+
 footer {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
 }
 
-/* Add some space below the footer */
 body {
     margin-bottom: 20px;
 }
 
-/* Media Query for Mobile Phones */
-@media (max-width: 768px) {
-    body {
-        align-items: flex-start; /* Align content to the top for small screens */
-    }
-    .container {
-        max-width: 100%; /* Full-width container on small screens */
-    }
-    header {
-        padding: 10px 0; /* Reduce header padding on small screens */
-    }
-    h1 {
-        font-size: 28px; /* Smaller font size for h1 on small screens */
-    }
-    h2 {
-        font-size: 20px; /* Smaller font size for h2 on small screens */
-    }
-}
 
-
-/* Style the iframe container */
+/* Twitch Overlay Styles */
 .iframe-container {
+    display: none;
     position: relative;
-    width: 100%;
+    z-index: 0;
 }
 
 .overlay-twitch {
@@ -95,7 +86,7 @@ body {
     left: 523px;
     width: 78px;
     height: 50px;
-    background: rgba(250, 0, 0, 0); /* Adjust the transparency (0.5 for 50% transparency) */
+    background: rgb(255, 0, 0); /* Adjust the transparency (0.5 for 50% transparency) */
     z-index: 2;
 }
 
@@ -105,6 +96,66 @@ body {
     left: 0%;
     width: 200px;
     height: 50px;
-    background: rgba(24, 24, 24, 0); /* Adjust the transparency (0.5 for 50% transparency) */
+    background: rgb(255, 0, 0); /* Adjust the transparency (0.5 for 50% transparency) */
     z-index: 2;
+}
+
+/* Login Form Styles */
+.login-container {
+    margin: 0;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 30vh;
+    width: 50vw;
+    max-width: 300px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+
+#logout-button {
+    margin-top: 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    width: 50vw;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#logout-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
 }

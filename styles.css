@@ -117,33 +117,23 @@ body {
 }
 
 .overlay-twitch {
-  position: absolute;
-  top: 78.7%;
-  left: 90.3%;
-  width: 78px;
-  height: 50px;
-  background: rgba(
-    255,
-    0,
-    0,
-    0
-  ); /* Adjust the transparency (0.5 for 50% transparency) */
-  z-index: 2;
+    position: absolute;
+    top: 85.4%;
+    left: 523px;
+    width: 78px;
+    height: 50px;
+    background: rgb(255, 0, 0); /* Adjust the transparency (0.5 for 50% transparency) */
+    z-index: 2;
 }
 
 .overlay-twitch-channel-name {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 200px;
-  height: 50px;
-  background: rgba(
-    255,
-    0,
-    0,
-    0
-  ); /* Adjust the transparency (0.5 for 50% transparency) */
-  z-index: 2;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 200px;
+    height: 50px;
+    background: rgb(255, 0, 0); /* Adjust the transparency (0.5 for 50% transparency) */
+    z-index: 2;
 }
 
 /* Login Form Styles */

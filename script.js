@@ -29,13 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', event => event.preventDefault());
 
-// document.onkeydown = function (event) {
-//     event = (event || window.event);
-//     if (event.key == "F12") {
-//         return false;
-//     }
-// }
-
-
+document.onkeydown = function (event) {
+    event = (event || window.event);
+    if (event.key == "F12") {
+        return false;
+    }
+}

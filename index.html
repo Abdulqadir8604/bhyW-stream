@@ -8,41 +8,14 @@
   </head>
 
   <body>
-    <div class="container">
-      <header>
-        <h1>Bhayander West Relay</h1>
-        <h3>{ miqat name }</h3>
-      </header>
-      <div class="login-container">
-        <div class="login-form">
-            <h1>Login</h1>
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
-            <button id="login-button">Login</button>
-            <p id="login-error" class="error-message"></p>
-        </div>
-    </div>
-      <main>
-        <div class="iframe-container">
-          <div class="servers">
-            <div class="serverBtn" id="serverA-button">Server A</div>
-          <div class="serverBtn" id="serverB-button">Server B</div>
-          </div>
-          <iframe
-            class="twitch-iframe"
-            src="https://player.twitch.tv/?channel=ragingpenguin8604&parent=127.0.0.1"
-            frameborder="0"
-            allowfullscreen="true"
-            scrolling="no"
-          ></iframe>
-          <iframe class="youtube-iframe" width="424" height="240" src="https://www.youtube.com/embed/2N7x1-lzAFs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          <button id="logout-button">Logout</button>
-        </div>
-      </main>
-      <footer>
-        <p>Developed and Maintained by Abdulqadir Bhinderwala</p>
-      </footer>
-    </div>
+    <iframe
+  src="http://192.168.0.109:8080/embed/video/"
+  title="Owncast"
+  height="350px" width="550px"
+  referrerpolicy="origin"
+  scrolling="no"
+  allowfullscreen>
+</iframe>
     <script src="script.js"></script>
   </body>
 </html>

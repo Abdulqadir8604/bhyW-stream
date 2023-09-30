@@ -13,6 +13,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const youtubeIframe = document.querySelector(".youtube-iframe");
     const twitchIframe = document.querySelector(".twitch-iframe");
 
+    // Function to pause or exit the video players
+    function pauseVideoPlayers() {
+        // Pause the YouTube player
+        if (youtubeIframe) {
+            const youtubePlayer = youtubeIframe.contentWindow;
+            if (youtubePlayer && typeof youtubePlayer.postMessage === "function") {
+                youtubePlayer.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            }
+        }
+
+        // Pause the Twitch player (you may need to customize this)
+        if (twitchIframe) {
+            // Replace 'your_channel_here' with your actual Twitch channel name or URL
+            twitchIframe.src = "https://www.twitch.tv/?channel=ragingpenguin8604&parent=127.0.0.1";
+        }
+    }
+
     serverAButton.classList.add("active");
     youtubeIframe.style.display = "none";
     twitchIframe.style.display = "none";
@@ -24,6 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
         serverBButton.classList.remove("active");
         youtubeIframe.style.display = "block";
         twitchIframe.style.display = "none";
+
+        // Pause or exit video players when switching servers
+        pauseVideoPlayers();
     });
 
     serverBButton.addEventListener("click", function () {
@@ -33,6 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
         serverAButton.classList.remove("active");
         youtubeIframe.style.display = "none";
         twitchIframe.style.display = "block";
+
+        // Pause or exit video players when switching servers
+        pauseVideoPlayers();
     });
 
     loginButton.addEventListener("click", function () {
@@ -49,10 +72,17 @@ document.addEventListener("DOMContentLoaded", function () {
             // Authentication failed, show an error message
             loginError.textContent = "Invalid username or password";
         }
+
+        // Pause or exit video players when logging in
+        pauseVideoPlayers();
     });
-    logoutButton.addEventListener("click", function () { // Add this function
+
+    logoutButton.addEventListener("click", function () {
         iframeContainer.style.display = "none";
         loginContainer.style.display = "block";
+
+        // Pause or exit video players when logging out
+        pauseVideoPlayers();
     });
 });
 

@@ -95,7 +95,7 @@ footer {
 
 /* Twitch Overlay Styles */
 .iframe-container {
-  display: none;
+  display: block;
   position: relative;
   z-index: 0;
 }
@@ -114,7 +114,7 @@ footer {
 .login-form {
   padding: 20px 40px;
   border-radius: 10px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;

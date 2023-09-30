@@ -1,5 +1,5 @@
-const reqUsername = "admin";
-const reqPassword = "admin";
+const reqUsername = "";
+const reqPassword = "";
 
 document.addEventListener("DOMContentLoaded", function () {
     const loginContainer = document.querySelector(".login-container");
@@ -7,6 +7,33 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginButton = document.querySelector("#login-button");
     const loginError = document.querySelector("#login-error");
     const logoutButton = document.querySelector("#logout-button");
+
+    const serverAButton = document.querySelector("#serverA-button");
+    const serverBButton = document.querySelector("#serverB-button");
+    const youtubeIframe = document.querySelector(".youtube-iframe");
+    const twitchIframe = document.querySelector(".twitch-iframe");
+
+    serverAButton.classList.add("active");
+    youtubeIframe.style.display = "none";
+    twitchIframe.style.display = "none";
+
+    serverAButton.addEventListener("click", function () {
+        serverAButton.classList.add("active");
+        serverAButton.style.backgroundColor = "var(--tertiary)";
+        serverBButton.style.backgroundColor = "var(--secondary)";
+        serverBButton.classList.remove("active");
+        youtubeIframe.style.display = "block";
+        twitchIframe.style.display = "none";
+    });
+
+    serverBButton.addEventListener("click", function () {
+        serverBButton.classList.add("active");
+        serverBButton.style.backgroundColor = "var(--tertiary)";
+        serverAButton.style.backgroundColor = "var(--secondary)";
+        serverAButton.classList.remove("active");
+        youtubeIframe.style.display = "none";
+        twitchIframe.style.display = "block";
+    });
 
     loginButton.addEventListener("click", function () {
         const username = document.querySelector("#username").value;

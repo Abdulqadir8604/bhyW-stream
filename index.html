@@ -24,15 +24,18 @@
     </div>
       <main>
         <div class="iframe-container">
+          <div class="servers">
+            <div class="serverBtn" id="serverA-button">Server A</div>
+          <div class="serverBtn" id="serverB-button">Server B</div>
+          </div>
           <iframe
             class="twitch-iframe"
-            src="https://player.twitch.tv/?channel=ragingpenguin8604&parent=abdulqadir8604.github.io"
+            src="https://player.twitch.tv/?channel=ragingpenguin8604&parent=127.0.0.1"
             frameborder="0"
             allowfullscreen="true"
             scrolling="no"
           ></iframe>
-          <div class="overlay-twitch-channel-name"></div>
-          <div class="overlay-twitch"></div>
+          <iframe class="youtube-iframe" width="424" height="240" src="https://www.youtube.com/embed/2N7x1-lzAFs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <button id="logout-button">Logout</button>
         </div>
       </main>

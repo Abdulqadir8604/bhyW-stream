@@ -71,6 +71,13 @@ iframe {
   max-height: 450px;
 }
 
+.youtube-iframe {
+  width: 90vw;
+  height: 60vh;
+  max-width: 800px;
+  max-height: 450px;
+}
+
 footer {
   width: 100vw;
   background-color: var(--primary);
@@ -179,4 +186,33 @@ button:hover {
 
 #logout-button:hover {
   background-color: #cc0000;
+}
+/* Server Buttons Styles */
+.servers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.serverBtn {
+  padding: 10px 20px;
+  background-color: var(--secondary);
+  color: #fff;
+  border: none;
+  margin: 0 10px 20px 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 
+    5px 5px 10px rgba(0, 0, 0, 0.1),
+    -5px -5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.serverBtn:active {
+  background-color: var(--tertiary);
+}
+
+.serverBtn:hover {
+  background-color: var(--tertiary);
 }
